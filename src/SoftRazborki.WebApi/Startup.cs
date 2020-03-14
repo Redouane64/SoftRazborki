@@ -12,6 +12,7 @@ namespace SoftRazborki.WebApi
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
+    using SoftRazborki.WebApi.Models;
 
     public class Startup
     {
@@ -26,6 +27,8 @@ namespace SoftRazborki.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.Configure<JwtTokenOptions>(Configuration.GetSection("JwtTokenOptions"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
