@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC160E40-0CF6-459C-BF05-5A2AC5F86149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftRazborki.WebApi", "src\SoftRazborki.WebApi\SoftRazborki.WebApi.csproj", "{C9078B2F-6991-480D-9FD8-8B599ACE2161}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftRazborki.WebApi", "src\SoftRazborki.WebApi\SoftRazborki.WebApi.csproj", "{C9078B2F-6991-480D-9FD8-8B599ACE2161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftRazborki.Desktop", "src\SoftRazborki.Desktop\SoftRazborki.Desktop.csproj", "{F7E135CB-8856-4FBA-8E32-0448B46A4B1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,12 +24,17 @@ Global
 		{C9078B2F-6991-480D-9FD8-8B599ACE2161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9078B2F-6991-480D-9FD8-8B599ACE2161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9078B2F-6991-480D-9FD8-8B599ACE2161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E135CB-8856-4FBA-8E32-0448B46A4B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E135CB-8856-4FBA-8E32-0448B46A4B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E135CB-8856-4FBA-8E32-0448B46A4B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E135CB-8856-4FBA-8E32-0448B46A4B1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C9078B2F-6991-480D-9FD8-8B599ACE2161} = {AC160E40-0CF6-459C-BF05-5A2AC5F86149}
+		{F7E135CB-8856-4FBA-8E32-0448B46A4B1A} = {AC160E40-0CF6-459C-BF05-5A2AC5F86149}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A7AA4E81-496C-4F24-9918-E2EF4FA3D44F}
