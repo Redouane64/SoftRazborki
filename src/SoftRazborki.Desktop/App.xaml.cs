@@ -9,6 +9,7 @@
     using System.Windows;
     using Prism.Ioc;
     using Prism.Unity;
+    using SoftRazborki.Desktop.ViewModels;
     using SoftRazborki.Desktop.Views;
 
     /// <summary>
@@ -23,7 +24,8 @@
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<StartUp, StartUpViewModel>("StartUp");
+            containerRegistry.RegisterForNavigation<SignIn, SignInViewModel>("SignIn");
         }
     }
 }

@@ -5,12 +5,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SoftRazborki.Desktop"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:vms="clr-namespace:SoftRazborki.Desktop.ViewModels"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
         Title="{Binding Title}"
         Height="400"
         Width="400">
-    <Grid>
-
-    </Grid>
+    <Window.Resources>
+    </Window.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ShowStartUpPageCommand}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <ContentControl prism:RegionManager.RegionName="{x:Static vms:MainWindowViewModel.MainContentRegion}" />
 </Window>

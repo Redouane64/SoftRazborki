@@ -1,38 +1,56 @@
 ﻿namespace SoftRazborki.Desktop.ViewModels
 {
-
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using Prism.Commands;
     using Prism.Mvvm;
     using Prism.Regions;
-    using SoftRazborki.Desktop.Views;
 
-    public class MainWindowViewModel : BindableBase
+    internal class MainWindowViewModel : BindableBase
     {
-        public static string MainContentRegionName
+        public static string MainContentRegion
         {
             get
             {
-                return "MainContentRegionName";
+                return "MainContent";
             }
         }
 
-        private string title;
+        private string _title = "";
 
-        private bool isSignedIn = false;
+        private readonly IRegionManager regionManager;
 
         public MainWindowViewModel(IRegionManager regionManager)
         {
-            Title = "SoftRazborki";
-
-            if (!isSignedIn)
-            {
-                regionManager.RegisterViewWithRegion(MainContentRegionName, typeof(SignIn));
-            }
+            this.regionManager = regionManager;
         }
 
         public string Title
         {
-            get { return title; }
-            set { SetProperty(ref title, value); }
+            get
+            {
+                return _title;
+            }
+
+            set
+            {
+                SetProperty(ref _title, value);
+            }
+        }
+
+        public DelegateCommand ShowStartUpPageCommand
+        {
+            get
+            {
+                return new DelegateCommand(ShowStartUp);
+            }
+        }
+
+        private void ShowStartUp()
+        {
+            Title = "SoftRazbokri";
+            regionManager.RequestNavigate(MainContentRegion, "StartUp");
         }
     }
 }
